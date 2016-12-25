@@ -68,3 +68,4 @@ View an existing PR in your browser.
 * Repo: [https://github.com/jasonnutter/vscode-github-pr](https://github.com/jasonnutter/vscode-github-pr)
 * Known Issues: [https://github.com/jasonnutter/vscode-github-pr/issues](https://github.com/jasonnutter/vscode-github-pr/issues)
 * Change Log: [https://github.com/jasonnutter/vscode-github-pr/blob/master/CHANGELOG.md](https://github.com/jasonnutter/vscode-github-pr/blob/master/CHANGELOG.md)
+* Gitlab Plugin: [https://gitlab.com/jasonnutter/vscode-gitlab-mr](https://gitlab.com/jasonnutter/vscode-gitlab-mr)
