@@ -1,0 +1,126 @@
+{
+  "name": "github-pr",
+  "displayName": "Github PR",
+  "description": "Manage PRs in Github from VS Code",
+  "version": "1.0.0",
+  "publisher": "jasonnutter",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.5.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.openPR",
+    "onCommand:extension.viewPR",
+    "onCommand:extension.checkoutPR"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.openPR",
+        "title": "Github PR: Create PR"
+      },
+      {
+        "command": "extension.viewPR",
+        "title": "Github PR: View PR"
+      },
+      {
+        "command": "extension.checkoutPR",
+        "title": "Github PR: Checkout PR"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.openPR",
+        "key": "ctrl+g ctrl+p",
+        "mac": "cmd+g cmd+p",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.viewPR",
+        "key": "ctrl+g ctrl+v",
+        "mac": "cmd+g cmd+v",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.checkoutPR",
+        "key": "ctrl+g ctrl+c",
+        "mac": "cmd+g cmd+c",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "title": "Github PR",
+      "properties": {
+        "github-pr.accessTokens": {
+          "type": "object",
+          "default": null,
+          "description": "Key/value pairs of Github Server URLs and Github Access Tokens."
+        },
+        "github-pr.accessToken": {
+          "type": "string",
+          "default": null,
+          "description": "Github Access Token for https://github.com. Use github-pr.accessTokens for Enterprise servers."
+        },
+        "github-pr.targetBranch": {
+          "type": "string",
+          "default": "master",
+          "description": "Target branch for PRs."
+        },
+        "github-pr.targetRemote": {
+          "type": "string",
+          "default": "origin",
+          "description": "Git remote to push to."
+        },
+        "github-pr.autoOpenPr": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically open a new PR."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "lint": "eslint .",
+    "test": "mocha"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "devDependencies": {
+    "@jasonnutter/eslint-config": "^1.0.1",
+    "@types/chai": "^3.4.34",
+    "@types/mocha": "^2.2.32",
+    "@types/node": "^6.0.40",
+    "babel-eslint": "^7.1.1",
+    "chai": "^3.5.0",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-mocha": "^4.8.0",
+    "eslint-plugin-react": "^6.8.0",
+    "mocha": "^2.3.3",
+    "pre-commit": "^1.1.3",
+    "typescript": "^2.0.3",
+    "vscode": "^1.0.0"
+  },
+  "dependencies": {
+    "github": "^7.1.0",
+    "lodash.trimstart": "^4.5.1",
+    "opn": "^4.0.2",
+    "q": "^1.4.1",
+    "simple-git": "^1.53.0",
+    "ssh-parse": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasonnutter/vscode-github-pr"
+  },
+  "icon": "img/github-logo.png"
+}
