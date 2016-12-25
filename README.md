@@ -66,5 +66,5 @@ View an existing PR in your browser.
 
 * Visual Studio Marketplace: [https://marketplace.visualstudio.com/items?itemName=jasonnutter.github-pr](https://marketplace.visualstudio.com/items?itemName=jasonnutter.github-pr)
 * Repo: [https://github.com/jasonnutter/vscode-github-pr](https://github.com/jasonnutter/vscode-github-pr)
-* Known Issues: [https://github.com/jasonnutter/vscode-github-pr/issues?scope=all&state=opened&utf8=%E2%9C%93&label_name%5B%5D=Bug](https://github.com/jasonnutter/vscode-github-pr/issues?scope=all&state=opened&utf8=%E2%9C%93&label_name%5B%5D=Bug)
+* Known Issues: [https://github.com/jasonnutter/vscode-github-pr/issues](https://github.com/jasonnutter/vscode-github-pr/issues)
 * Change Log: [https://github.com/jasonnutter/vscode-github-pr/blob/master/CHANGELOG.md](https://github.com/jasonnutter/vscode-github-pr/blob/master/CHANGELOG.md)
